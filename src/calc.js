@@ -1,17 +1,14 @@
 import readlineSync from 'readline-sync';
+import { greeting, countOfRound } from 
 
 const calc = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  const element = ['+', '-', '*'];
-  console.log('What is the result of the expression?');
   let randomNumberFirst;
   let randomNumberSecond;
   let rigthAnswer;
   let k;
   let answer;
   for (let i = 0; i < 3; i += 1) {
+    const element = ['+', '-', '*'];
     randomNumberFirst = Math.floor(Math.random() * 100);
     randomNumberSecond = Math.floor(Math.random() * 100);
     k = Math.floor(Math.random() * 3);
