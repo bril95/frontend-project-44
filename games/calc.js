@@ -6,8 +6,8 @@ const calc = () => {
   // цикл
   const gamePart = () => {
     const element = ['+', '-', '*'];
-    const randomNumberFirst = Math.floor(Math.random() * 100);
-    const randomNumberSecond = Math.floor(Math.random() * 100);
+    const randomNumberFirst = Math.floor(Math.random() * 10);
+    const randomNumberSecond = Math.floor(Math.random() * 10);
     const k = Math.floor(Math.random() * 3);
     const question = `${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
     // проверяем какой правильный ответ на самом деле
@@ -16,7 +16,9 @@ const calc = () => {
       rightAnswer = randomNumberFirst + randomNumberSecond;
     } else if (element[k] === '-') {
       rightAnswer = randomNumberFirst - randomNumberSecond;
-    } else rightAnswer = randomNumberFirst * randomNumberSecond;
+    } else if (element[k] === '*') {
+      rightAnswer = randomNumberFirst * randomNumberSecond;
+    }
     // проверяем ответ игрока с правильным
     return [question, rightAnswer];
   };
