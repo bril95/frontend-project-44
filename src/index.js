@@ -8,8 +8,8 @@ const mainPartOfApp = (howToPlay, gamePart) => {
   for (let i = 0; i < 3; i += 1) {
     const game = gamePart();
     console.log('Question: ', game[0]);
-    const answer = Number(readlineSync.question('Your answer: '));
-    const rightAnswer = game[1];
+    const answer = readlineSync.question('Your answer: ');
+    const rightAnswer = String(game[1]);
     if (answer === rightAnswer) {
       console.log('Correct!');
     } else {
