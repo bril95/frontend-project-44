@@ -12,7 +12,7 @@ const prime = () => {
   const howToPlay = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   // цикл
   const gamePart = () => {
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    const randomNumber = Math.floor(Math.random() * 100) + 2;
     const question = `${randomNumber}`;
     let rightAnswer = isPrime(randomNumber);
     if (rightAnswer === true) {
