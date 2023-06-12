@@ -6,8 +6,7 @@ const progression = () => {
   // цикл
   const gamePart = () => {
     const startProgression = Math.floor(Math.random() * 10);
-    const arr = [];
-    arr.push(startProgression);
+    const arr = [startProgression];
     const stepProgression = Math.floor(Math.random() * 10) + 1;
     let nextElement = startProgression + stepProgression;
     arr.push(nextElement);
@@ -18,7 +17,7 @@ const progression = () => {
     const randomElement = Math.floor(Math.random() * 10);
     const rightAnswer = arr[randomElement];
     arr[randomElement] = '..';
-    const question = `Question: ${arr}`;
+    const question = `${arr}`;
     return [question, rightAnswer];
   };
   mainPartOfApp(howToPlay, gamePart);

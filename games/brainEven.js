@@ -4,7 +4,7 @@ const checkEven = () => {
   const howToPlay = 'Answer "yes" if the number is even, otherwise answer "no".';
   const gamePart = () => {
     const randomNumber = Math.floor(Math.random() * 100);
-    const question = `Question: ${randomNumber}`;
+    const question = `${randomNumber}`;
     let rigthAnswer;
     if (randomNumber % 2 === 0) {
       rigthAnswer = 'yes';

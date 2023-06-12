@@ -9,7 +9,7 @@ const calc = () => {
     const randomNumberFirst = Math.floor(Math.random() * 100);
     const randomNumberSecond = Math.floor(Math.random() * 100);
     const k = Math.floor(Math.random() * 3);
-    const question = `Question: ${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
+    const question = `${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
     // проверяем какой правильный ответ на самом деле
     let rightAnswer;
     if (element[k] === '+') {

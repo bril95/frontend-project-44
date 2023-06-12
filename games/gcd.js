@@ -7,7 +7,7 @@ const gcd = () => {
   const gamePart = () => {
     let randomNumberFirst = Math.floor(Math.random() * 100);
     let randomNumberSecond = Math.floor(Math.random() * 100);
-    const question = `Question: ${randomNumberFirst} ${randomNumberSecond}`;
+    const question = `${randomNumberFirst} ${randomNumberSecond}`;
     // проверяем какой правильный ответ на самом деле
     while (randomNumberFirst !== randomNumberSecond) {
       if (randomNumberFirst > randomNumberSecond) {
