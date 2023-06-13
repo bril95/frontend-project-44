@@ -7,7 +7,7 @@ const mainPartOfApp = (howToPlay, gamePart) => {
   console.log(howToPlay);
   for (let i = 0; i < 3; i += 1) {
     const game = gamePart();
-    console.log('Question:', game[0]);
+    console.log(`Question: ${game[0]}`);
     const answer = readlineSync.question('Your answer: ');
     const rightAnswer = String(game[1]);
     if (answer === rightAnswer) {
