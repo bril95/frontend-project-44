@@ -1,4 +1,4 @@
-import mainPartOfApp from '../src/index.js';
+import mainPartOfApp from '../index.js';
 
 const gcd = () => {
   //  спрашивает имя

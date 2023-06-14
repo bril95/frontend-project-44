@@ -1,4 +1,4 @@
-import mainPartOfApp from '../src/index.js';
+import mainPartOfApp from '../index.js';
 
 const checkEven = () => {
   const howToPlay = 'Answer "yes" if the number is even, otherwise answer "no".';

@@ -1,4 +1,4 @@
-import mainPartOfApp from '../src/index.js';
+import mainPartOfApp from '../index.js';
 
 function isPrime(num) {
   for (let i = 2; i < num; i += 1) {
