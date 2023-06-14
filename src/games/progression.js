@@ -1,20 +1,21 @@
 import startGame from '../index.js';
+import { random10 } from '../utils.js';
 
 const progression = () => {
   //  спрашивает имя
   const howToPlay = 'What number is missing in the progression?';
   // цикл
   const gamePart = () => {
-    const startProgression = Math.floor(Math.random() * 10);
+    const startProgression = random10();
     let arr = [startProgression];
-    const stepProgression = Math.floor(Math.random() * 10) + 1;
+    const stepProgression = random10() + 1;
     let nextElement = startProgression + stepProgression;
     arr.push(nextElement);
     for (let i = 0; i < 8; i += 1) {
       nextElement += stepProgression;
       arr.push(nextElement);
     }
-    const randomElement = Math.floor(Math.random() * 10);
+    const randomElement = random10();
     const rightAnswer = arr[randomElement];
     arr[randomElement] = '..';
     arr = arr.join(' ');

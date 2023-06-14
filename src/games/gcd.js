@@ -1,12 +1,13 @@
 import startGame from '../index.js';
+import { random100 } from '../utils.js';
 
 const gcd = () => {
   //  спрашивает имя
   const howToPlay = 'Find the greatest common divisor of given numbers.';
   // цикл
   const gamePart = () => {
-    let randomNumberFirst = Math.floor(Math.random() * 100);
-    let randomNumberSecond = Math.floor(Math.random() * 100);
+    let randomNumberFirst = random100();
+    let randomNumberSecond = random100();
     const question = `${randomNumberFirst} ${randomNumberSecond}`;
     // проверяем какой правильный ответ на самом деле
     while (randomNumberFirst !== randomNumberSecond) {

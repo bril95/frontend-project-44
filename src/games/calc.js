@@ -1,4 +1,5 @@
 import startGame from '../index.js';
+import { random10 } from '../utils.js';
 
 const calc = () => {
   //  спрашивает имя
@@ -6,8 +7,8 @@ const calc = () => {
   // цикл
   const gamePart = () => {
     const element = ['+', '-', '*'];
-    const randomNumberFirst = Math.floor(Math.random() * 10);
-    const randomNumberSecond = Math.floor(Math.random() * 10);
+    const randomNumberFirst = random10();
+    const randomNumberSecond = random10();
     const k = Math.floor(Math.random() * 3);
     const question = `${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
     // проверяем какой правильный ответ на самом деле
