@@ -20,7 +20,7 @@ const calc = () => {
       rightAnswer = randomNumberFirst * randomNumberSecond;
     }
     // проверяем ответ игрока с правильным
-    return [question, rightAnswer];
+    return [question, String(rightAnswer)];
   };
   startGame(howToPlay, gamePart);
 };

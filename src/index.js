@@ -5,11 +5,12 @@ const startGame = (howToPlay, gamePart) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(howToPlay);
-  for (let i = 0; i < 3; i += 1) {
-    const game = gamePart();
-    console.log(`Question: ${game[0]}`);
+  const countOfRound = 3;
+  for (let i = 0; i < countOfRound; i += 1) {
+    const [const1, const2] = gamePart();
+    console.log(`Question: ${const1}`);
     const answer = readlineSync.question('Your answer: ');
-    const rightAnswer = String(game[1]);
+    const rightAnswer = const2;
     if (answer === rightAnswer) {
       console.log('Correct!');
     } else {

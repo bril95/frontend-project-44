@@ -19,7 +19,7 @@ const progression = () => {
     arr[randomElement] = '..';
     arr = arr.join(' ');
     const question = `${arr}`;
-    return [question, rightAnswer];
+    return [question, String(rightAnswer)];
   };
   startGame(howToPlay, gamePart);
 };
