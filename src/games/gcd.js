@@ -1,15 +1,14 @@
 import startGame from '../index.js';
 import { random100 } from '../utils.js';
 
-const gcd = () => {
-  //  спрашивает имя
-  const howToPlay = 'Find the greatest common divisor of given numbers.';
-  // цикл
+const gameRule = 'Find the greatest common divisor of given numbers.';
+
+const gcd = (rule) => {
+  rule = gameRule;
   const gamePart = () => {
     let randomNumberFirst = random100();
     let randomNumberSecond = random100();
     const question = `${randomNumberFirst} ${randomNumberSecond}`;
-    // проверяем какой правильный ответ на самом деле
     while (randomNumberFirst !== randomNumberSecond) {
       if (randomNumberFirst > randomNumberSecond) {
         randomNumberFirst -= randomNumberSecond;
@@ -18,10 +17,9 @@ const gcd = () => {
       }
     }
     const rightAnswer = randomNumberFirst;
-    // проверяем ответ игрока с правильным
     return [question, String(rightAnswer)];
   };
-  startGame(howToPlay, gamePart);
+  startGame(rule, gamePart);
 };
 
 export default gcd;

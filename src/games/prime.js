@@ -1,17 +1,10 @@
 import startGame from '../index.js';
-import { random100 } from '../utils.js';
+import { random100, isPrime } from '../utils.js';
 
-function isPrime(num) {
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) return false;
-  }
-  return num !== 1;
-}
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const prime = () => {
-  //  спрашивает имя
-  const howToPlay = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  // цикл
+const prime = (rule) => {
+  rule = gameRule;
   const gamePart = () => {
     const randomNumber = random100() + 2;
     const question = `${randomNumber}`;
@@ -21,7 +14,7 @@ const prime = () => {
     } else rightAnswer = 'no';
     return [question, rightAnswer];
   };
-  startGame(howToPlay, gamePart);
+  startGame(rule, gamePart);
 };
 
 export default prime;

@@ -1,8 +1,10 @@
 import startGame from '../index.js';
 import { random100 } from '../utils.js';
 
-const checkEven = () => {
-  const howToPlay = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const checkEven = (rule) => {
+  rule = gameRule;
   const gamePart = () => {
     const randomNumber = random100();
     const question = `${randomNumber}`;
@@ -12,7 +14,7 @@ const checkEven = () => {
     } else rigthAnswer = 'no';
     return [question, rigthAnswer];
   };
-  startGame(howToPlay, gamePart);
+  startGame(rule, gamePart);
 };
 
 export default checkEven;

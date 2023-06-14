@@ -1,10 +1,10 @@
 import startGame from '../index.js';
 import { random10 } from '../utils.js';
 
-const progression = () => {
-  //  спрашивает имя
-  const howToPlay = 'What number is missing in the progression?';
-  // цикл
+const gameRule = 'What number is missing in the progression?';
+
+const progression = (rule) => {
+  rule = gameRule;
   const gamePart = () => {
     const startProgression = random10();
     let arr = [startProgression];
@@ -22,7 +22,7 @@ const progression = () => {
     const question = `${arr}`;
     return [question, String(rightAnswer)];
   };
-  startGame(howToPlay, gamePart);
+  startGame(rule, gamePart);
 };
 
 export default progression;
