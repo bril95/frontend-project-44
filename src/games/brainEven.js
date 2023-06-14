@@ -1,4 +1,4 @@
-import mainPartOfApp from '../index.js';
+import startGame from '../index.js';
 
 const checkEven = () => {
   const howToPlay = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -11,7 +11,7 @@ const checkEven = () => {
     } else rigthAnswer = 'no';
     return [question, rigthAnswer];
   };
-  mainPartOfApp(howToPlay, gamePart);
+  startGame(howToPlay, gamePart);
 };
 
 export default checkEven;

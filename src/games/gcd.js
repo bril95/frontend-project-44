@@ -1,4 +1,4 @@
-import mainPartOfApp from '../index.js';
+import startGame from '../index.js';
 
 const gcd = () => {
   //  спрашивает имя
@@ -20,7 +20,7 @@ const gcd = () => {
     // проверяем ответ игрока с правильным
     return [question, rightAnswer];
   };
-  mainPartOfApp(howToPlay, gamePart);
+  startGame(howToPlay, gamePart);
 };
 
 export default gcd;

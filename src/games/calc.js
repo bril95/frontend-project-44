@@ -1,4 +1,4 @@
-import mainPartOfApp from '../index.js';
+import startGame from '../index.js';
 
 const calc = () => {
   //  спрашивает имя
@@ -22,7 +22,7 @@ const calc = () => {
     // проверяем ответ игрока с правильным
     return [question, rightAnswer];
   };
-  mainPartOfApp(howToPlay, gamePart);
+  startGame(howToPlay, gamePart);
 };
 
 export default calc;

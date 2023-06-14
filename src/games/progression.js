@@ -1,4 +1,4 @@
-import mainPartOfApp from '../index.js';
+import startGame from '../index.js';
 
 const progression = () => {
   //  спрашивает имя
@@ -21,7 +21,7 @@ const progression = () => {
     const question = `${arr}`;
     return [question, rightAnswer];
   };
-  mainPartOfApp(howToPlay, gamePart);
+  startGame(howToPlay, gamePart);
 };
 
 export default progression;

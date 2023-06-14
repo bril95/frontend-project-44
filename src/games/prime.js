@@ -1,4 +1,4 @@
-import mainPartOfApp from '../index.js';
+import startGame from '../index.js';
 
 function isPrime(num) {
   for (let i = 2; i < num; i += 1) {
@@ -20,7 +20,7 @@ const prime = () => {
     } else rightAnswer = 'no';
     return [question, rightAnswer];
   };
-  mainPartOfApp(howToPlay, gamePart);
+  startGame(howToPlay, gamePart);
 };
 
 export default prime;
