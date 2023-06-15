@@ -1,3 +1,28 @@
+# frontend-project-44
+
+**greeting game and 5 different math games**
+
+## Setup
+
+```bash
+make install
+```
+
+## Run games
+
+```bash
+make brain-'select game name'
+```
+
+### Game list
+
+1. brain-games (greeting game)
+2. brain-calc
+3. brain-even
+4. brain-gcd
+5. brain-prime
+6. brain-progression
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/bril95/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/bril95/frontend-project-44/actions)
 
@@ -12,3 +37,7 @@
 [![asciicast](https://asciinema.org/a/rxr9dydxFuWz6ezIqlqdG6HyV.svg)](https://asciinema.org/a/rxr9dydxFuWz6ezIqlqdG6HyV)
 
 [![asciicast](https://asciinema.org/a/zVFS10qDH6hSWRZ7gN3TAqBJg.svg)](https://asciinema.org/a/zVFS10qDH6hSWRZ7gN3TAqBJg)
+
+### System requirements:
+
+*nodejs v18.16.0*
