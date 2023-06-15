@@ -11,15 +11,14 @@ const gameLogic = (random) => {
   return rightAnswer;
 };
 
-const prime = (rule) => {
-  rule = gameRule;
+const prime = () => {
   const gamePart = () => {
     const randomNumber = random100() + 2;
     const question = `${randomNumber}`;
     const logic = gameLogic(randomNumber);
     return [question, logic];
   };
-  startGame(rule, gamePart);
+  startGame(gameRule, gamePart);
 };
 
 export default prime;

@@ -15,8 +15,7 @@ const gameLogic = (randomFirst, randomSecond, sign) => {
   return String(answer);
 };
 
-const calc = (rule) => {
-  rule = gameRule;
+const calc = () => {
   const gamePart = () => {
     const element = ['+', '-', '*'];
     const randomNumberFirst = random10();
@@ -26,7 +25,7 @@ const calc = (rule) => {
     const rightAnswer = gameLogic(randomNumberFirst, randomNumberSecond, element[k]);
     return [question, rightAnswer];
   };
-  startGame(rule, gamePart);
+  startGame(gameRule, gamePart);
 };
 
 export default calc;

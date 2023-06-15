@@ -16,8 +16,7 @@ const gameLogic = (random1, random2) => {
   return randomFirst;
 };
 
-const gcd = (rule) => {
-  rule = gameRule;
+const gcd = () => {
   const gamePart = () => {
     const randomNumberFirst = random100();
     const randomNumberSecond = random100();
@@ -25,7 +24,7 @@ const gcd = (rule) => {
     const rightAnswer = gameLogic(randomNumberFirst, randomNumberSecond);
     return [question, String(rightAnswer)];
   };
-  startGame(rule, gamePart);
+  startGame(gameRule, gamePart);
 };
 
 export default gcd;

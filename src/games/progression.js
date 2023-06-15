@@ -16,8 +16,7 @@ const gameLogic = () => {
   return array;
 };
 
-const progression = (rule) => {
-  rule = gameRule;
+const progression = () => {
   const gamePart = () => {
     let arr = gameLogic();
     const randomElement = random10();
@@ -27,7 +26,7 @@ const progression = (rule) => {
     const question = `${arr}`;
     return [question, String(rightAnswer)];
   };
-  startGame(rule, gamePart);
+  startGame(gameRule, gamePart);
 };
 
 export default progression;

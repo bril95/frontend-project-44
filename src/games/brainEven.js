@@ -11,15 +11,14 @@ const gameLogic = (random) => {
   return rigthAnswer;
 };
 
-const checkEven = (rule) => {
-  rule = gameRule;
+const checkEven = () => {
   const gamePart = () => {
     const randomNumber = random100();
     const question = `${randomNumber}`;
     const logic = gameLogic(randomNumber);
     return [question, logic];
   };
-  startGame(rule, gamePart);
+  startGame(gameRule, gamePart);
 };
 
 export default checkEven;
