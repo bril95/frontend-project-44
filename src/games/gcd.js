@@ -3,7 +3,9 @@ import { random100 } from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const gameLogic = (randomFirst, randomSecond) => {
+const gameLogic = (random1, random2) => {
+  let randomFirst = random1;
+  let randomSecond = random2;
   while (randomFirst !== randomSecond) {
     if (randomFirst > randomSecond) {
       randomFirst -= randomSecond;
