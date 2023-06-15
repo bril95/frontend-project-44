@@ -3,18 +3,23 @@ import { random10 } from '../utils.js';
 
 const gameRule = 'What number is missing in the progression?';
 
+const gameLogic = () => {
+  const startProgression = random10();
+  const array = [startProgression];
+  const stepProgression = random10() + 1;
+  let nextElement = startProgression + stepProgression;
+  array.push(nextElement);
+  for (let i = 0; i < 8; i += 1) {
+    nextElement += stepProgression;
+    array.push(nextElement);
+  }
+  return array;
+};
+
 const progression = (rule) => {
   rule = gameRule;
   const gamePart = () => {
-    const startProgression = random10();
-    let arr = [startProgression];
-    const stepProgression = random10() + 1;
-    let nextElement = startProgression + stepProgression;
-    arr.push(nextElement);
-    for (let i = 0; i < 8; i += 1) {
-      nextElement += stepProgression;
-      arr.push(nextElement);
-    }
+    let arr = gameLogic();
     const randomElement = random10();
     const rightAnswer = arr[randomElement];
     arr[randomElement] = '..';

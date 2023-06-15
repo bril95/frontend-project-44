@@ -3,20 +3,24 @@ import { random100 } from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
+const gameLogic = (randomFirst, randomSecond) => {
+  while (randomFirst !== randomSecond) {
+    if (randomFirst > randomSecond) {
+      randomFirst -= randomSecond;
+    } else {
+      randomSecond -= randomFirst;
+    }
+  }
+  return randomFirst;
+};
+
 const gcd = (rule) => {
   rule = gameRule;
   const gamePart = () => {
-    let randomNumberFirst = random100();
-    let randomNumberSecond = random100();
+    const randomNumberFirst = random100();
+    const randomNumberSecond = random100();
     const question = `${randomNumberFirst} ${randomNumberSecond}`;
-    while (randomNumberFirst !== randomNumberSecond) {
-      if (randomNumberFirst > randomNumberSecond) {
-        randomNumberFirst -= randomNumberSecond;
-      } else {
-        randomNumberSecond -= randomNumberFirst;
-      }
-    }
-    const rightAnswer = randomNumberFirst;
+    const rightAnswer = gameLogic(randomNumberFirst, randomNumberSecond);
     return [question, String(rightAnswer)];
   };
   startGame(rule, gamePart);
