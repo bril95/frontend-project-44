@@ -11,19 +11,19 @@ function isPrime(num) {
 }
 
 const isNumberPrime = (number) => {
-  let rightAnswer = isPrime(number);
+  const rightAnswer = isPrime(number);
   if (rightAnswer === true) {
-    rightAnswer = 'yes';
-  } else rightAnswer = 'no';
-  return rightAnswer;
+    return true;
+  } return false;
 };
 
 const prime = () => {
   const gamePart = () => {
     const randomNumber = random(100) + 2;
     const question = `${randomNumber}`;
-    const logic = isNumberPrime(randomNumber);
-    return [question, logic];
+    let rightAnswer = isNumberPrime(randomNumber);
+    rightAnswer = rightAnswer ? 'yes' : 'no';
+    return [question, rightAnswer];
   };
   startGame(gameRule, gamePart);
 };
