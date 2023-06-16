@@ -3,7 +3,7 @@ import random from '../utils.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const gameLogic = (random1, random2) => {
+const findCommonNumber = (random1, random2) => {
   let randomFirst = random1;
   let randomSecond = random2;
   while (randomFirst !== randomSecond) {
@@ -21,7 +21,7 @@ const gcd = () => {
     const randomNumberFirst = random(100);
     const randomNumberSecond = random(100);
     const question = `${randomNumberFirst} ${randomNumberSecond}`;
-    const rightAnswer = gameLogic(randomNumberFirst, randomNumberSecond);
+    const rightAnswer = findCommonNumber(randomNumberFirst, randomNumberSecond);
     return [question, String(rightAnswer)];
   };
   startGame(gameRule, gamePart);

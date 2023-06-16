@@ -10,7 +10,7 @@ function isPrime(num) {
   return num !== 1;
 }
 
-const gameLogic = (number) => {
+const isNumberPrime = (number) => {
   let rightAnswer = isPrime(number);
   if (rightAnswer === true) {
     rightAnswer = 'yes';
@@ -22,7 +22,7 @@ const prime = () => {
   const gamePart = () => {
     const randomNumber = random(100) + 2;
     const question = `${randomNumber}`;
-    const logic = gameLogic(randomNumber);
+    const logic = isNumberPrime(randomNumber);
     return [question, logic];
   };
   startGame(gameRule, gamePart);

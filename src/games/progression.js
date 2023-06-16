@@ -3,7 +3,7 @@ import random from '../utils.js';
 
 const gameRule = 'What number is missing in the progression?';
 
-const gameLogic = () => {
+const makeProgression = () => {
   const startProgression = random(10);
   const array = [startProgression];
   const stepProgression = random(10) + 1;
@@ -18,7 +18,7 @@ const gameLogic = () => {
 
 const progression = () => {
   const gamePart = () => {
-    let arr = gameLogic();
+    let arr = makeProgression();
     const randomElement = random(10);
     const rightAnswer = arr[randomElement];
     arr[randomElement] = '..';
