@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import { random100 } from '../utils.js';
+import { random } from '../utils.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -13,7 +13,7 @@ const gameLogic = (random) => {
 
 const checkEven = () => {
   const gamePart = () => {
-    const randomNumber = random100();
+    const randomNumber = random(100);
     const question = `${randomNumber}`;
     const logic = gameLogic(randomNumber);
     return [question, logic];

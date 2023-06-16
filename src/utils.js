@@ -1,11 +1,6 @@
-const random10 = () => {
-  const random = Math.floor(Math.random() * 10);
-  return random;
-};
-
-const random100 = () => {
-  const random = Math.floor(Math.random() * 100);
-  return random;
+const random = (length) => {
+  const randomNumber = Math.floor(Math.random() * length);
+  return randomNumber;
 };
 
 function isPrime(num) {
@@ -15,4 +10,4 @@ function isPrime(num) {
   return num !== 1;
 }
 
-export { random10, random100, isPrime };
+export { random, isPrime };

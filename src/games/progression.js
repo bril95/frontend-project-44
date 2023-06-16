@@ -1,12 +1,12 @@
 import startGame from '../index.js';
-import { random10 } from '../utils.js';
+import { random } from '../utils.js';
 
 const gameRule = 'What number is missing in the progression?';
 
 const gameLogic = () => {
-  const startProgression = random10();
+  const startProgression = random(10);
   const array = [startProgression];
-  const stepProgression = random10() + 1;
+  const stepProgression = random(10) + 1;
   let nextElement = startProgression + stepProgression;
   array.push(nextElement);
   for (let i = 0; i < 8; i += 1) {
@@ -19,7 +19,7 @@ const gameLogic = () => {
 const progression = () => {
   const gamePart = () => {
     let arr = gameLogic();
-    const randomElement = random10();
+    const randomElement = random(10);
     const rightAnswer = arr[randomElement];
     arr[randomElement] = '..';
     arr = arr.join(' ');
