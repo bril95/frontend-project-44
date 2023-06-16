@@ -11,8 +11,8 @@ function isPrime(num) {
 }
 
 const isNumberPrime = (number) => {
-  const rightAnswer = isPrime(number);
-  if (rightAnswer === true) {
+  const answer = isPrime(number);
+  if (answer === true) {
     return true;
   } return false;
 };
