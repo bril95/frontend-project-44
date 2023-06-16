@@ -1,11 +1,11 @@
 import startGame from '../index.js';
-import { random } from '../utils.js';
+import random from '../utils.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const gameLogic = (random) => {
+const gameLogic = (number) => {
   let rigthAnswer;
-  if (random % 2 === 0) {
+  if (number % 2 === 0) {
     rigthAnswer = 'yes';
   } else rigthAnswer = 'no';
   return rigthAnswer;
