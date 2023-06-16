@@ -24,8 +24,8 @@ const calcFinishNumber = (randomFirst, randomSecond, sign) => {
 const calc = () => {
   const gamePart = () => {
     const element = ['+', '-', '*'];
-    const randomNumberFirst = random(10);
-    const randomNumberSecond = random(10);
+    const randomNumberFirst = random(0, 10);
+    const randomNumberSecond = random(0, 10);
     const k = random(3);
     const question = `${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
     const rightAnswer = calcFinishNumber(randomNumberFirst, randomNumberSecond, element[k]);

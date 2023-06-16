@@ -11,7 +11,7 @@ const isNumberEven = (number) => {
 
 const checkEven = () => {
   const gamePart = () => {
-    const randomNumber = random(100);
+    const randomNumber = random(0, 100);
     const question = `${randomNumber}`;
     let rightAnswer = isNumberEven(randomNumber);
     rightAnswer = rightAnswer ? 'yes' : 'no';
