@@ -5,12 +5,18 @@ const gameRule = 'What is the result of the expression?';
 
 const gameLogic = (randomFirst, randomSecond, sign) => {
   let answer;
-  if (sign === '+') {
-    answer = randomFirst + randomSecond;
-  } else if (sign === '-') {
-    answer = randomFirst - randomSecond;
-  } else if (sign === '*') {
-    answer = randomFirst * randomSecond;
+  switch (sign) {
+    case '+':
+      answer = randomFirst + randomSecond;
+      break;
+    case '-':
+      answer = randomFirst - randomSecond;
+      break;
+    case '*':
+      answer = randomFirst * randomSecond;
+      break;
+    default:
+      console.log('ERROR');
   }
   return String(answer);
 };
@@ -20,7 +26,7 @@ const calc = () => {
     const element = ['+', '-', '*'];
     const randomNumberFirst = random(10);
     const randomNumberSecond = random(10);
-    const k = Math.floor(Math.random() * 3);
+    const k = random(3);
     const question = `${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
     const rightAnswer = gameLogic(randomNumberFirst, randomNumberSecond, element[k]);
     return [question, rightAnswer];
