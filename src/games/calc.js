@@ -12,11 +12,8 @@ const calcFinishNumber = (randomFirst, randomSecond, sign) => {
     case '-':
       answer = randomFirst - randomSecond;
       break;
-    case '*':
-      answer = randomFirst * randomSecond;
-      break;
     default:
-      console.log('ERROR');
+      answer = randomFirst * randomSecond;
   }
   return String(answer);
 };
@@ -26,9 +23,9 @@ const calc = () => {
     const element = ['+', '-', '*'];
     const randomNumberFirst = random(0, 10);
     const randomNumberSecond = random(0, 10);
-    const k = random(3);
-    const question = `${randomNumberFirst} ${element[k]} ${randomNumberSecond}`;
-    const rightAnswer = calcFinishNumber(randomNumberFirst, randomNumberSecond, element[k]);
+    const i = random(0, 3);
+    const question = `${randomNumberFirst} ${element[i]} ${randomNumberSecond}`;
+    const rightAnswer = calcFinishNumber(randomNumberFirst, randomNumberSecond, element[i]);
     return [question, rightAnswer];
   };
   startGame(gameRule, gamePart);
