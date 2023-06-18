@@ -14,19 +14,16 @@ const makeArray = (start, step) => {
   return array;
 };
 
-const progression = () => {
-  const gamePart = () => {
-    const startProgression = random(0, 10);
-    const stepProgression = random(1, 10);
-    let arr = makeArray(startProgression, stepProgression);
-    const randomElement = random(0, 10);
-    const rightAnswer = arr[randomElement];
-    arr[randomElement] = '..';
-    arr = arr.join(' ');
-    const question = `${arr}`;
-    return [question, String(rightAnswer)];
-  };
-  startGame(gameRule, gamePart);
+const createRound = () => {
+  const startProgression = random(0, 10);
+  const stepProgression = random(1, 10);
+  let arr = makeArray(startProgression, stepProgression);
+  const randomElement = random(0, 10);
+  const rightAnswer = arr[randomElement];
+  arr[randomElement] = '..';
+  arr = arr.join(' ');
+  const question = `${arr}`;
+  return [question, String(rightAnswer)];
 };
 
-export default progression;
+export default () => startGame(gameRule, createRound);
