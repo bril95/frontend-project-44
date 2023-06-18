@@ -4,31 +4,25 @@ import random from '../utils.js';
 const gameRule = 'What is the result of the expression?';
 
 const calcFinishNumber = (randomFirst, randomSecond, sign) => {
-  let answer;
   switch (sign) {
     case '+':
-      answer = randomFirst + randomSecond;
-      break;
+      return randomFirst + randomSecond;
     case '-':
-      answer = randomFirst - randomSecond;
-      break;
+      return randomFirst - randomSecond;
+    case '*':
+      return randomFirst * randomSecond;
     default:
-      answer = randomFirst * randomSecond;
+      throw new Error(`Unknown order state: '${sign}'!`);
   }
-  return String(answer);
 };
 
-const calc = () => {
-  const gamePart = () => {
-    const element = ['+', '-', '*'];
-    const randomNumberFirst = random(0, 10);
-    const randomNumberSecond = random(0, 10);
-    const i = random(0, 3);
-    const question = `${randomNumberFirst} ${element[i]} ${randomNumberSecond}`;
-    const rightAnswer = calcFinishNumber(randomNumberFirst, randomNumberSecond, element[i]);
-    return [question, rightAnswer];
-  };
-  startGame(gameRule, gamePart);
+const createRound = () => {
+  const element = ['+', '-', '*'];
+  const randomNumberFirst = random(0, 10);
+  const randomNumberSecond = random(0, 10);
+  const i = random(0, 3);
+  const question = `${randomNumberFirst} ${element[i]} ${randomNumberSecond}`;
+  const rightAnswer = calcFinishNumber(randomNumberFirst, randomNumberSecond, element[i]);
+  return [question, String(rightAnswer)];
 };
-
-export default calc;
+export default () => startGame(gameRule, createRound);
