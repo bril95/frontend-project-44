@@ -12,7 +12,7 @@ const calcFinishNumber = (randomFirst, randomSecond, sign) => {
     case '*':
       return randomFirst * randomSecond;
     default:
-      throw new Error(`Unknown order state: '${sign}'!`);
+      throw new Error(`Unknown sign: '${sign}'!`);
   }
 };
 
