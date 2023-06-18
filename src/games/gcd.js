@@ -16,15 +16,12 @@ const findCommonNumber = (random1, random2) => {
   return randomFirst;
 };
 
-const gcd = () => {
-  const gamePart = () => {
-    const randomNumberFirst = random(0, 100);
-    const randomNumberSecond = random(0, 100);
-    const question = `${randomNumberFirst} ${randomNumberSecond}`;
-    const rightAnswer = findCommonNumber(randomNumberFirst, randomNumberSecond);
-    return [question, String(rightAnswer)];
-  };
-  startGame(gameRule, gamePart);
+const createRound = () => {
+  const randomNumberFirst = random(0, 100);
+  const randomNumberSecond = random(0, 100);
+  const question = `${randomNumberFirst} ${randomNumberSecond}`;
+  const rightAnswer = findCommonNumber(randomNumberFirst, randomNumberSecond);
+  return [question, String(rightAnswer)];
 };
 
-export default gcd;
+export default () => startGame(gameRule, createRound);
