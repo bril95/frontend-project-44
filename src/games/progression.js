@@ -17,12 +17,11 @@ const makeArray = (start, step) => {
 const createRound = () => {
   const startProgression = random(0, 10);
   const stepProgression = random(1, 10);
-  let arr = makeArray(startProgression, stepProgression);
+  const arr = makeArray(startProgression, stepProgression);
   const randomElement = random(0, 10);
   const rightAnswer = arr[randomElement];
   arr[randomElement] = '..';
-  arr = arr.join(' ');
-  const question = `${arr}`;
+  const question = arr.join(' ');
   return [question, String(rightAnswer)];
 };
 
