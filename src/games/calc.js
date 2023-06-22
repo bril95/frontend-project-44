@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import random from '../utils.js';
+import generateRandomNumber from '../utils.js';
 
 const gameRule = 'What is the result of the expression?';
 
@@ -17,12 +17,12 @@ const calcFinishNumber = (randomFirst, randomSecond, sign) => {
 };
 
 const createRound = () => {
-  const element = ['+', '-', '*'];
-  const randomNumberFirst = random(0, 10);
-  const randomNumberSecond = random(0, 10);
-  const i = random(0, 3);
-  const question = `${randomNumberFirst} ${element[i]} ${randomNumberSecond}`;
-  const rightAnswer = calcFinishNumber(randomNumberFirst, randomNumberSecond, element[i]);
+  const operators = ['+', '-', '*'];
+  const firstNumber = generateRandomNumber(0, 10);
+  const secondNumber = generateRandomNumber(0, 10);
+  const i = generateRandomNumber(0, 3);
+  const question = `${firstNumber} ${operators[i]} ${secondNumber}`;
+  const rightAnswer = calcFinishNumber(firstNumber, secondNumber, operators[i]);
   return [question, String(rightAnswer)];
 };
 export default () => startGame(gameRule, createRound);
